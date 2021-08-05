@@ -30,6 +30,7 @@ public class StudentController {
 	@RequestMapping(value = "/readAll", method = RequestMethod.GET)
 	public List<Students> readAllRecords() {
 		List <Students> listAccount = service.getAllStudent();
+		System.out.println("List of students");
 		return listAccount;
 	}
 	
