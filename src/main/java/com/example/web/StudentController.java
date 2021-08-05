@@ -47,6 +47,7 @@ public class StudentController {
 	@RequestMapping(value = "/read/{studentId}", method = RequestMethod.GET,produces = {"application/json"}) 
 	public ResponseEntity<Students> findStudentByPrimaryKey( @PathVariable Integer studentId) {
 		Students student =  service.getStudentById(studentId);
+		System.out.println("find by id with app branch");
 		
 		if(student != null) 
 			return new ResponseEntity<Students>(student, HttpStatus.FOUND);
